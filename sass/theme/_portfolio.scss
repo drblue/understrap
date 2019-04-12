@@ -1,0 +1,56 @@
+/**
+ * Portfolio styles
+ */
+
+#wrapper-portfolio-items {
+	background-color: $dark;
+	color: $white;
+	text-align: center;
+
+	.wrapper-portfolio {
+		display: flex;
+
+		.portfolio {
+			background-color: $light;
+			color: $body-color;
+			display: flex;
+			flex-direction: column;
+			padding: 1rem 1.5rem;
+
+			img {
+				margin-bottom: 0.5rem;
+			}
+
+			h1 {
+				font-size: 1.5rem;
+			}
+
+			main {
+				flex-grow: 1;
+			}
+		}
+
+	}
+}
+
+/** Single Portfolio styles */
+.single-us_portfolio {
+	article {
+		img {
+			margin-bottom: 1.5rem;
+		}
+	}
+
+	aside {
+		> div {
+			background-color: $dark;
+			color: $white;
+			padding: 0.75rem 1.25rem;
+			margin-bottom: 1.5rem;
+
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+		}
+	}
+}
