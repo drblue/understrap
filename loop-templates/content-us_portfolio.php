@@ -1,9 +1,12 @@
+<?php
+	$logo = get_field('logo');
+?>
 <div class="wrapper-portfolio col-md-6 col-lg-4">
 	<article class="portfolio">
 		<header>
-			<?php if (has_post_thumbnail()) : ?>
+			<?php if ($logo) : ?>
 				<a href="<?php the_permalink(); ?>">
-					<?php the_post_thumbnail('portfolio-thumbnail', ['class' => 'img-fluid']); ?>
+					<img src="<?php echo $logo['url']; ?>" class="img-fluid">
 				</a>
 			<?php endif; ?>
 
