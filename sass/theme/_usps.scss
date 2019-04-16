@@ -21,6 +21,12 @@
 			h1 {
 				font-size: 1.5rem;
 			}
+
+			.btn.btn-secondary {
+				background-color: $primary;
+				border-color: $dark-primary;
+				border-width: 1px;
+			}
 		}
 
 	}
