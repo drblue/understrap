@@ -31,7 +31,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 			<aside class="col-md-3">
 				<?php
-					if ($client = get_post_meta(get_the_ID(), 'client', true)) {
+					if ($client = get_field('client')) {
 						printf(__('<div class="client">Client: %s</div>', 'understrap'), $client);
 					}
 				?>
