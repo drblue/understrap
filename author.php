@@ -55,6 +55,10 @@ $container = get_theme_mod( 'understrap_container_type' );
 								<dt><?php esc_html_e( 'Profile', 'understrap' ); ?></dt>
 								<dd><?php esc_html_e( $curauth->user_description ); ?></dd>
 							<?php endif; ?>
+
+							<?php if ($phone = get_field('phone', 'user_' . $curauth->ID)) : ?>
+								Phone: <?php echo $phone; ?>
+							<?php endif; ?>
 						</dl>
 					<?php endif; ?>
 
