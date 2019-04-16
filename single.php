@@ -30,6 +30,10 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 					<?php understrap_post_nav(); ?>
 
+					<hr class="my-4">
+
+					<?php get_template_part( 'loop-templates/related-posts'); ?>
+
 				<?php endwhile; // end of the loop. ?>
 
 			</main><!-- #main -->
