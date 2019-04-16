@@ -36,6 +36,12 @@ $container = get_theme_mod( 'understrap_container_type' );
 					}
 				?>
 
+				<?php
+					if ($project_hours = get_field('project_hours')) {
+						printf(__('<div class="project-hours">Project Hours: %d</div>', 'understrap'), $project_hours);
+					}
+				?>
+
 				<div class="branch">
 					<?php
 						the_terms(
