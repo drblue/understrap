@@ -1,0 +1,15 @@
+/**
+ * Front Page styles
+ */
+
+@import "front-page/usps";
+@import "front-page/portfolio";
+@import "front-page/language";
+@import "front-page/contact";
+
+.home {
+	section {
+		padding-top: 2rem;
+		padding-bottom: 2rem;
+	}
+}

@@ -22,7 +22,7 @@ if ($portfolio_items->have_posts()) {
 		<div class="wrapper" id="wrapper-portfolio-items">
 			<div class="container">
 
-				<h1><?php _e('Portfolio', 'understrap'); ?></h1>
+				<h1><?php the_field('portfolio_title'); ?></h1>
 
 				<div class="row">
 					<!-- Loop over the Portfolio Items -->

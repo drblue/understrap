@@ -10,22 +10,19 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // Get the three latest USPs
-$usps = new WP_Query([
-	'post_type' => 'us_usp',
-	'posts_per_page' => 3,
-]);
+$usps = get_field('usps');
 
 // Did we get any USPs?
-if ($usps->have_posts()) {
+if ($usps) {
 	// GREAT SUCCESS!
 	?>
-		<div class="wrapper" id="wrapper-usps">
+		<section id="wrapper-usps">
 			<div class="container">
 				<div class="row">
 					<!-- Loop over the USPs -->
 					<?php
-						while ($usps->have_posts()) {
-							$usps->the_post();
+						foreach ($usps as $post) {
+							setup_postdata($post);
 							?>
 								<!-- For each USP, include a template part? -->
 								<?php get_template_part('loop-templates/content', 'usp'); ?>
@@ -37,6 +34,6 @@ if ($usps->have_posts()) {
 					?>
 				</div><!-- /.row -->
 			</div><!-- /.container -->
-		</div><!-- /#wrapper-usps -->
+		</section><!-- /#wrapper-usps -->
 	<?php
 }

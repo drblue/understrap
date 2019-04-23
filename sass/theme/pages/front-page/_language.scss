@@ -1,0 +1,24 @@
+/**
+ * Language styles
+ */
+
+#wrapper-languages {
+	text-align: center;
+
+	.col-md {
+
+		.language {
+			background-color: $light;
+			padding: 1rem 1.5rem;
+
+			.fa {
+				color: $primary;
+				margin: 0.75rem 0;
+			}
+
+			h1 {
+				font-size: 1.5rem;
+			}
+		}
+	}
+}
