@@ -101,6 +101,30 @@ if ( ! function_exists ( 'understrap_setup' ) ) {
 		// Add image size for Portfolio Items
 		add_image_size('portfolio-thumbnail', 510, 287, true);
 
+		// Add Editor Color Palette for Gutenberg
+		add_theme_support('editor-color-palette', [
+			[
+				'name' => __('Primary Blue', 'understrap'),
+				'slug' => 'primary-blue',
+				'color' => '#5533ff',
+			],
+			[
+				'name' => __('Christmas Red', 'understrap'),
+				'slug' => 'christmas-red',
+				'color' => '#d42426',
+			],
+			[
+				'name' => __('White', 'understrap'),
+				'slug' => 'white',
+				'color' => '#ffffff',
+			],
+		]);
+
+		// Disable Custom Colors in Gutenberg Color Palette
+		add_theme_support('disable-custom-colors');
+
+		// Add support for Editor Styles in Gutenberg
+		add_theme_support('editor-styles');
 	}
 }
 
