@@ -101,6 +101,21 @@ gulp.task( 'minifycss', function() {
     .pipe( gulp.dest( paths.css ) );
 });
 
+gulp.task( 'minifyeditorcss', function() {
+  return gulp.src( paths.css + '/custom-editor-style.css' )
+  .pipe( sourcemaps.init( { loadMaps: true } ) )
+    .pipe( cleanCSS( { compatibility: '*' } ) )
+    .pipe( plumber( {
+            errorHandler: function( err ) {
+                console.log( err ) ;
+                this.emit( 'end' );
+            }
+        } ) )
+    .pipe( rename( { suffix: '.min' } ) )
+     .pipe( sourcemaps.write( './' ) )
+    .pipe( gulp.dest( paths.css ) );
+});
+
 gulp.task( 'cleancss', function() {
   return gulp.src( paths.css + '/*.min.css', { read: false } ) // Much faster
     .pipe( ignore( 'theme.css' ) )
@@ -108,7 +123,7 @@ gulp.task( 'cleancss', function() {
 });
 
 gulp.task( 'styles', function( callback ) {
-    gulpSequence( 'sass', 'minifycss' )( callback );
+    gulpSequence( 'sass', 'minifycss', 'minifyeditorcss' )( callback );
 } );
 
 // Run:
