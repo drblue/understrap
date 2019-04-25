@@ -12,12 +12,6 @@ $text_color = get_field('text_color');
 ?>
 
 <div id="testimonial-<?php echo $block['id']; ?>" class="testimonial">
-	<?php if ($image): ?>
-		<div class="testimonial-image">
-			<?php echo wp_get_attachment_image($image, 'medium'); ?>
-		</div>
-	<?php endif; ?>
-
 	<blockquote class="blockquote">
 		<div class="testimonial-text">
 			<span class="fa fa-quote-left"></span><?php the_field('testimonial'); ?><span class="fa fa-quote-right"></span>
@@ -29,6 +23,11 @@ $text_color = get_field('text_color');
 			<?php the_field('role'); ?>
 		</div>
 	</blockquote>
+	<?php if ($image): ?>
+		<div class="testimonial-image">
+			<?php echo wp_get_attachment_image($image, 'medium'); ?>
+		</div>
+	<?php endif; ?>
 </div>
 
 <style>

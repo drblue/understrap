@@ -3,16 +3,33 @@
  */
 
 .testimonial {
-	// @extend .row;
-	@include clearfix;
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 1rem;
 
 	blockquote {
-		// @extend .col;
-		padding: 1rem 1.25rem;
+		display: flex;
+		flex-direction: column;
+		flex-grow: 1;
+		margin-bottom: 0;
+		padding: 1rem 1.5rem;
 
 		.testimonial-text {
+			flex-grow: 1;
 			font-size: 2rem;
 			margin-bottom: 1.5rem;
+			padding: 0 0.5rem;
+			position: relative;
+
+			.fa {
+				font-size: 1rem;
+				position: absolute;
+
+				&.fa-quote-left {
+					top: 0.4rem;
+					left: -0.8rem;
+				}
+			}
 		}
 		.testimonial-author {
 			font-weight: 500;
@@ -24,6 +41,5 @@
 	}
 
 	.testimonial-image {
-		@include float-right;
 	}
 }
