@@ -6,9 +6,9 @@
 
 <section id="front-page-hero">
 	<div class="container">
-		<h1>I Make Pretty Websites</h1>
-		<h2>'cause I can</h2>
+		<h1><?php the_field('hero_title'); ?></h1>
+		<h2><?php the_field('hero_subtitle'); ?></h2>
 
-		<img src="/wp-content/uploads/2019/04/dude-computer.png">
+		<img src="<?php the_field('hero_image')['url']; ?>" class="img-fluid">
 	</div>
 </section>
