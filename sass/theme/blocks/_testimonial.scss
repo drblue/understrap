@@ -1,0 +1,29 @@
+/**
+ * Testimonial Block Styles
+ */
+
+.testimonial {
+	// @extend .row;
+	@include clearfix;
+
+	blockquote {
+		// @extend .col;
+		padding: 1rem 1.25rem;
+
+		.testimonial-text {
+			font-size: 2rem;
+			margin-bottom: 1.5rem;
+		}
+		.testimonial-author {
+			font-weight: 500;
+		}
+		.testimonial-role {
+			font-size: 0.75rem;
+			font-style: italic;
+		}
+	}
+
+	.testimonial-image {
+		@include float-right;
+	}
+}
