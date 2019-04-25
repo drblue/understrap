@@ -125,6 +125,9 @@ if ( ! function_exists ( 'understrap_setup' ) ) {
 
 		// Add support for Editor Styles in Gutenberg
 		add_theme_support('editor-styles');
+
+		// Add align wide support for Gutenberg
+		add_theme_support('align-wide');
 	}
 }
 

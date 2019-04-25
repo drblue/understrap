@@ -1,0 +1,35 @@
+/**
+ * Gutenberg Styles
+ */
+
+.entry-header,
+.entry-content,
+.entry-footer {
+	> * {
+		margin-left: auto !important;
+		margin-right: auto !important;
+		max-width: 80%;
+
+		@include media-breakpoint-up(md) {
+			max-width: 70%;
+		}
+		@include media-breakpoint-up(lg) {
+			max-width: 60%;
+		}
+
+		&.alignwide {
+			max-width: 90%;
+
+			@include media-breakpoint-up(md) {
+				max-width: 80%;
+			}
+			@include media-breakpoint-up(lg) {
+				max-width: 70%;
+			}
+		}
+
+		&.alignfull {
+			max-width: 100%;
+		}
+	}
+}
