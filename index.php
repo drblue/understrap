@@ -11,9 +11,8 @@
  * @package understrap
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly.
-}
+// Exit if accessed directly.
+defined( 'ABSPATH' ) || exit;
 
 get_header();
 
@@ -69,4 +68,4 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 </div><!-- #index-wrapper -->
 
-<?php get_footer(); ?>
+<?php get_footer();

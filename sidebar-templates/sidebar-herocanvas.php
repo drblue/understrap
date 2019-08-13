@@ -5,9 +5,8 @@
  * @package understrap
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly.
-}
+// Exit if accessed directly.
+defined( 'ABSPATH' ) || exit;
 ?>
 
 <?php if ( is_active_sidebar( 'herocanvas' ) ) : ?>
@@ -16,4 +15,4 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<?php dynamic_sidebar( 'herocanvas' ); ?>
 
-<?php endif; ?>
+<?php endif;

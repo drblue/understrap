@@ -5,9 +5,8 @@
  * @package understrap
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly.
-}
+// Exit if accessed directly.
+defined( 'ABSPATH' ) || exit;
 
 $container = get_theme_mod( 'understrap_container_type' );
 ?>
@@ -30,4 +29,4 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 	</div><!-- #wrapper-static-hero -->
 
-<?php endif; ?>
+<?php endif;
